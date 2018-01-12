@@ -54,7 +54,7 @@ $(function () {
         dataType:'json',
         success:function (info) {
           if(info.success){
-            location.href='index.html'
+            location.href='index.css'
           }
          
           if(info.error==1000){
