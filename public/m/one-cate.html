@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/onecate.css">
 </head>
 <body>
   <!--左侧-->
@@ -33,8 +33,8 @@
           <span class='glyphicon glyphicon-list'></span>
           分类管理</a>
         <!--二级分类-->
-          <div class='sce'>
-            <a href="one-cate.html" class='one'>一级分类</a>
+          <div class='sce' style='display: block'>
+            <a href="one-cate.html" class='one active'>一级分类</a>
             <a href="two-cate.html" class='sceond'>二级分类</a>
           </div>
         </li>
@@ -63,6 +63,26 @@
        <li class="active">分类管理</li>
        <li class="active">一级分类</li>
      </ol>
+     <button class='btn btn-default addcate'>添加分类</button>
+     
+     <!--表格-->
+     <table class='table table-bordered'>
+       <thead>
+        <tr>
+          <td>序号</td>
+          <td>分类名称</td>
+        </tr>
+       </thead>
+       <tbody>
+       
+       </tbody>
+     </table>
+  
+  
+     <!--分页-->
+     <div class='text-right'>
+       <ul id='paginator'></ul>
+     </div>
    </div>
     
 
@@ -84,15 +104,52 @@
       </div>
     </div>
   </div>
-
+  
+  <!--分类模态框-->
+    <div class="modal fade" tabindex="-1" id="cateModal">
+      <div class="modal-dialog modal-sm" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h4 class="modal-title">添加分类</h4>
+          </div>
+          <div class="modal-body">
+          <!--表单-->
+            <form id='form'>
+              <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入一级分类的名称" name='categoryName'>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <!--h5新增form属性 可和外面的button相联-->
+            <button form='form' type='submit' class="btn btn-primary ">添加</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+
+  <script type='texxt/html' id='tmp'>
+    
+    {{ each rows v i }}
+      <tr>
+        <td width='20%'>{{ (page-1)*size+ i+1}}</td>
+        <td>{{ v.categoryName }}</td>
+      </tr>
+    {{/each}}
+  </script>
+  
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
   <script src="./lib/echarts/echarts.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/product.js"></script>
+  <script src="./js/onecate.js"></script>
 </body>
 </html>

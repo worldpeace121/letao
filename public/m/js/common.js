@@ -32,13 +32,6 @@ $(function () {
   $('.cate').on('click',function () {
     $(this).next().slideToggle()
   })
-  var as=$('.manage li a');
-  as.on('click',function () {
-    as.each(function (i) {
-      as.eq(i).removeClass('active');
-    })
-    $(this).addClass('active');
-  })
   
   
   //menu
