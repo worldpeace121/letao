@@ -38,6 +38,7 @@ $(function () {
   $('.menu').on('click',function () {
       $('.lt-aside').toggleClass('move');
       $('.lt-main').toggleClass('move');
+      $('.top').toggleClass('now');
   })
   
   //退出功能
