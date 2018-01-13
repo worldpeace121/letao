@@ -105,7 +105,9 @@ a:hover,a:visited,a:link,a:active{
   float: right;
 }
 
-
+.content{
+  padding: 0 20px;
+}
 
 
 
