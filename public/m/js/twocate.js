@@ -99,7 +99,7 @@ $('#form').on('success.form.bv',function (e) {
         $('#form').data('bootstrapValidator').resetForm(true);
           $('.one-cate').text('请选择一级分类');
           $('.pic').attr('src','./images/none.png')
-          
+          page=1;
         render();
       }
     })
@@ -125,10 +125,11 @@ $('#form').on('success.form.bv',function (e) {
       $('.pic').attr('src',data.result.picAddr);
       
       // console.log(e);
+      
       $('#brandLogo').val(data.result.picAddr);
       
       // 让brandLogo校验变成成功
-      $('#from').data("bootstrapValidator").updateStatus("brandLogo", "VALID");
+      $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID");
     }
   })
   
