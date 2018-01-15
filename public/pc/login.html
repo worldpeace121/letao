@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./css/search.css">
 </head>
 <body>
 
@@ -23,41 +23,31 @@
       </a>
     </div>
     <div class="head-c">
-      <span>乐淘云购</span>
+      <span>登录</span>
     </div>
-    <div class="head-r">
-      <a href="search.html">
-        <span class='fa fa-search'></span>
-      </a>
-    </div>
+    
   </div>
   
   <div class="lt-main">
-    <!--侧边-->
-    <div class="aside">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll ">
-          <ul class='cate'>
-          
-            <!--模板-->
-          </ul>
-        </div>
+  
+    <form class="mui-input-group">
+      <div class="mui-input-row">
+        <label>用户名</label>
+        <input type="text" class="mui-input-clear" placeholder="请输入用户名">
       </div>
-    </div>
-    
-    <!--右边-->
-    <div class="main-right">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll scrollpro">
-          <ul class='branch'>
-           
-            <!--模板-->
-          </ul>
-        </div>
+      <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password" placeholder="请输入密码">
       </div>
-    </div>
+      <div class="mui-button-row">
+        <button type="submit" class="mui-btn mui-btn-primary" >登录</button>
+        <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
+      </div>
+    </form>
     
+    <p class='mui-pull-right'><a href="#">免费注册</a></p>
   </div>
+  
   
   
   <footer class='lt-footer'>
@@ -68,7 +58,7 @@
           <p>首页</p>
         </a>
       </li>
-      <li class='active'>
+      <li >
         <a href="category.html">
           <span class='fa fa-bars'></span>
           <p>分类</p>
@@ -92,33 +82,10 @@
 </div>
 
 
-<!--一级分类模板-->
-<script type='text/html' id='tmp-cate'>
-  {{ each rows v i}}
-  <li data-id='{{v.id}}'>
-    <a href="#">{{v.categoryName}}</a>
-  </li>
-  {{/each}}
-</script>
-
-<!--二级分类模板-->
-<script type='text/html' id='tmp-brand'>
-  
-  {{if total==0}}
-    <p class='tip'>该分类下没有更多的品牌信息!</p>
-  {{/if}}
-  {{each rows v i}}
-    <li><a href="#" data-id='{{v.categoryId}}'><img src="{{v.brandLogo?v.brandLogo:'./images/none.png'}}">
-      <p>{{v.brandName}}</p>
-    </a></li>
-  {{/each}}
-</script>
-
-
 <script src='./lib/zepto/zepto.min.js'></script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/index.js"></script>
-<script src="./js/category.js"></script>
+<script src="./js/login.js"></script>
 </body>
 </html>

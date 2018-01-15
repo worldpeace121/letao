@@ -1,0 +1,65 @@
+
+
+.lt-search{
+  margin:10px;
+  position: relative;
+  /*width: 100%;*/
+  
+}
+.lt-search .search{
+  border: 1px solid #007aff;
+  border-radius: 10px;
+}
+
+.lt-search .btn-s{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 54px;
+  background-color: #007aff;
+  border: 1px solid #007aff;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+}
+
+
+/*历史记录*/
+.record{
+  width: 100%;
+}
+.record .history{
+  float: left;
+  color: #666;
+  font-size:14px;
+}
+.record .del{
+  float: right;
+  color: #666;
+  font-size:14px;
+}
+.del a{
+  color: #666;
+}
+
+.del-content{
+  margin-top:10px;
+}
+.del-content li {
+  border: 1px dashed red;
+  padding: 5px;
+}
+
+.confirm{
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+
+
+
+
+

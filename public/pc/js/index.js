@@ -11,5 +11,15 @@ $(function () {
     indicators: false,
   });
 
+  //渲染商品
+  function render() {
+    
+    // $.ajax({
+    //   type:'get',
+    //   url:'/product/queryProduct',
+    //   data
+    // })
+  }
+  render()
 
 })

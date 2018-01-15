@@ -44,13 +44,21 @@
   text-align: center;
 }
 .branch li img{
-  width: 70px;
   height: 70px;
   display: block;
   margin: 0 auto;
 }
 
+.tip{
+  color: #000;
+  font-size: 18px;
+  margin-top: 10px;
+}
 
+.scrollpro{
+  transition: all 1s;
+  /*transform: translate3d(0px,0px,0px);*/
+}
 
 
 
