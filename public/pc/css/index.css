@@ -1,0 +1,46 @@
+/*内容*/
+
+.nav{
+  width: 100%;
+  padding: 10px;
+}
+.nav li{
+  float: left;
+  width: 33.3%;
+}
+.nav li img{
+  width: 100%;
+  display: block;
+}
+
+
+.product{
+  width: 100%;
+  padding:10px;
+}
+.product li{
+  float: left;
+  width: 48%;
+  border: 1px solid #999;
+  padding:10px;
+  margin-bottom:10px;
+  text-align: center;
+}
+.product li:nth-child(odd){
+  margin-right: 4%;
+}
+.product li img{
+  width: 100%;
+  display: block;
+}
+.product li p{
+  color: #333;
+}
+.product li .price span:first-child{
+  color: red;
+}
+.product li .price span:last-child{
+  text-decoration: line-through;
+}
+
+
